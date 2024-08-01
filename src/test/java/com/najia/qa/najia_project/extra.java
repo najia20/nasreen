@@ -11,6 +11,7 @@ public class extra {
 		// TODO Auto-generated method stub
 		extra obj=new extra();
 		obj.tom();
+		
 	}
 	public  void tom() throws Exception {
 		System.setProperty("Webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
@@ -19,7 +20,7 @@ public class extra {
 		WebDriver driver =new ChromeDriver();
 		driver.get("https://www.demoblaze.com/");
 	driver.manage().window().maximize();
-	//Thread.sleep(100000);
+	Thread.sleep(100000);
 	driver.findElement(By.linkText("Contact")).click();
 	Thread.sleep(5000);
 	driver.findElement(By.id("recipient-email")).sendKeys("abc@gmail.com");
